@@ -1,0 +1,463 @@
+body {
+    background: #e46643;
+    color: #444;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    
+    padding: 0;
+    margin: 0;
+}
+div, p, a, img, form, button{
+    box-sizing: border-box; 
+    /*сво-ва width и height вкл. знач. padding и border */
+}
+a {
+    text-decoration: none;
+    /*убрать подчёркивание ссылок*/
+}
+ul, li{
+    display: block; /*для избежания проблем в различных браузерах*/
+    
+    padding: 0;
+    margin: 0; 
+}
+
+
+
+
+
+
+/*----------------------------*/
+/* MENU */
+/*----------------------------*/
+.container {
+    display: block;
+    
+    width: 1160px;
+    height: 80px;
+    
+    background: url(img/header_white.png) no-repeat;
+    color: #444;
+    
+    margin: 0 auto; /*--отцентровка--*/
+    margin-top: 70px;
+    
+    box-shadow: 1px 15px 35px -30px #000;
+}
+.nav {
+    display: flex; /*выравнивание всех эл оболочки в одну строку*/
+    align-items: center;
+}
+.menu {
+    display: flex;
+    
+    margin-left: 40px;
+    
+    align-items: center;
+}
+    .menu li {
+    font-size: 12px;
+    
+    margin-right: 45px;
+    }
+    .menu li a { 
+        display: inline-block;
+        color: #444;
+
+        position: relative; 
+        padding: 10px 0;
+        
+        text-decoration: none;
+    }
+    /*--- эффекты: подчёркивание + полужирный шрифт---*/
+    .menu li a:before {
+        display: block;
+        position: absolute;
+
+        background: #444;
+        content: "";
+        
+        height: 3px;
+        width: 0;
+
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        
+        left: 50%;
+        bottom: 0;
+    }
+    .menu li a:after {
+        display: block;
+        position: absolute;
+
+        background-color: #444;
+        content: "";
+
+        height: 3px;
+        width: 0;
+        
+        transition: width 0.3s ease-in-out;
+        
+        left: 50%;
+        bottom: 0;
+    }
+    .menu li a:hover:before {
+        width: 50%;
+        left: 0;
+    }
+    .menu li a:hover:after {
+        width: 50%;
+    }
+    
+    .menu li.active a,
+    .menu li a:hover {
+        font-weight: bold;
+    }
+    
+li.title-1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+li.vertical-align {
+    border-right: 1px solid #444;
+    padding-right: 40px;
+    
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
+/*----------------------------*/
+/* SEARCH BOX */
+/*----------------------------*/
+.input-wrapper {
+    width: 400px;
+    height: 80px;
+    
+    background: url(img/MagnifyingGlass.png) no-repeat 171px 31px;
+  }
+.wrapper_search {
+    width: 194px;
+   
+    margin-left: 200px;
+    margin-top: 20px;
+}
+  .wrapper_search:after {
+    position: absolute;
+    
+    overflow: hidden;
+    user-select: none;
+    
+    font-size: 13px;
+  }
+  input {
+    background: none;
+    color: #444;
+
+    outline: none;
+    border: none;
+    border-radius: 0;
+
+    line-height: 40px;
+
+    padding: 0;
+    width: auto;
+    min-width: 100%;
+    
+    font-size: 13px;
+  }
+
+/*------THE END: header(menu)------*/
+/*---------------------------------*/
+
+
+
+
+
+
+
+
+
+.main {
+    display: block;
+    
+    height:940px;
+    width: 1160px;
+ }
+ .middle_box {
+    display: block;
+    position: relative;
+    
+    height:500px;
+    width: 1160px;
+
+    margin: 0 auto;
+    margin-top: 40px;
+    
+    box-shadow: 1px 15px 35px -30px #000;
+
+    background:
+    url(img/filter.png) no-repeat 100% 50% ,
+    url(img/pic.png) no-repeat 100% 50%,
+    url(img/overlay.png) no-repeat 100% 50%,
+    url(img/whiteworld.png) no-repeat 100% 50% ;
+    }
+/*---Левая часть:логотип и осн.инф.---*/
+.middle_box_content {
+    padding: 195px 627px 137px 40px;
+}
+.middle_box_content h1 {
+    font-size: 21px;
+}
+.middle_box_content p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.middle_box_logo-1 {
+    position: absolute;
+    
+    top: 50px;
+    left: 40px;
+}
+
+
+
+
+
+
+/*---------------------------------*/
+/*----------BUTTON-------------*/
+a.green-button {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    
+    color: #fff;
+    
+    display:block;
+    width:150px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 8px 16px;
+    margin: 40px 0;
+
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;        
+    }
+    a.green-button {
+    background-color: rgb( 43, 153, 91 );
+    border: 1px solid rgb( 33, 126, 74 );
+    }
+            
+    a.green-button:hover {
+    background-color: rgb( 75, 183, 141 );
+    }
+    /*---------------------------------*/
+
+
+
+.middle_box_logo-2 {
+    position: absolute;
+
+    top: 40px;
+    right: 40px;
+}
+.middle_box_logo-3 {
+    position: absolute;
+
+    bottom: 30px;
+    right: 40px;
+}
+.middle_box_logo-3 p3 {
+    color:#fff ;
+
+    font-size: 72px;
+
+    font-family: 'lternateGothicNo2BTRegular';
+}
+
+
+
+/*---------------------------------*/
+/*  listings section  */
+.wrapper{
+    display: block;
+    position: relative;
+
+}
+.listings{  
+    width: 1160px;
+
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.properties_list li {
+    background: 
+  
+    url('img/product_bg.png') no-repeat 100%;
+
+}
+.listings ul.properties_list{
+    list-style: none;
+    overflow: hidden;
+}
+
+.listings ul.properties_list li{
+    color: #444;
+
+    display: block;
+    width: 360px;
+    height: 400px;
+    position: relative;
+    float: left;
+    margin: 0 40px 40px 0;
+}
+
+.listings ul.properties_list li img.property_img{
+    width: 100%;
+    height: auto!important;
+    vertical-align: top;
+}
+
+.properties_list li .vans-logo {
+    position: absolute;
+    top: 177px;
+    right: 3px;
+}
+.listings ul.properties_list li:nth-child(3n+0){
+    margin-right: 0;
+}
+
+.listings ul li .property_details{
+}
+.listings ul li .property_details h1 a{
+    text-decoration: none;
+    color: #444;
+}
+.listings ul li .property_details h1{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 7px;
+}
+
+
+
+
+
+/*---------------------------------*/
+/*----------BUTTON-------------*/
+a.blue-button {
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    
+    color: #fff;
+    
+    display:block;
+    width:150px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 8px 16px;
+    margin: 40px 0;
+
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: background-color 0.1s linear;
+    -moz-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;        
+    }
+    a.blue-button {
+    background-color: #67a3bb;
+    border: 1px solid #67a3bb;
+    }
+            
+    a.blue-button:hover {
+    background-color: #7fbbd3;
+    }
+    /*---------------------------------*/
+
+
+
+
+
+
+ /*-------FOOTER----------------*/
+ #footer {
+    display: block;
+    position: relative;
+
+    width: 1160px;
+    height: 50px;
+
+    margin: 0 auto;
+    margin-top: 40px;
+    bottom: 70px;
+
+    box-shadow: 1px 15px 35px -20px #000;
+
+    color:#999;
+    background-color: #f8f8f8;
+}
+.footer-block {
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+}
+.footer-block li {
+    font-size: 12px;
+    
+    margin-right: 755px;
+    margin-top: 10px;
+    }
+    li.title-2 {
+        font-weight: bold;
+        color: #333;
+    }
+    li.vertical-align-2 {
+    border-right: 1px solid #b5b5b5;
+    padding-right: 40px;
+    
+    line-height: 24px;
+    }
+.footer_links{
+    float:right;
+    padding: 18px 45px 0 0;
+}
+.footer_links a {
+
+    display: inline-block;
+    margin-left: 21px;
+}
+
+@font-face {
+    font-family: 'lternateGothicNo2BTRegular';
+
+    src: url('fonts/lternateGothicNo2BTRegular/lternateGothicNo2BTRegular.eot'),
+    url('fonts/lternateGothicNo2BTRegular/lternateGothicNo2BTRegular.woff') format('woff'),
+    url('fonts/lternateGothicNo2BTRegular/lternateGothicNo2BTRegular.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
