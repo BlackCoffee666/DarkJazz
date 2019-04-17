@@ -11,7 +11,7 @@ div, p, a, img, form, button{
     box-sizing: border-box; 
     /*сво-ва width и height вкл. знач. padding и border */
 }
-a {
+a{
     text-decoration: none;
     /*убрать подчёркивание ссылок*/
 }
@@ -22,8 +22,10 @@ ul, li{
     margin: 0; 
 }
 
-
-
+.wrapper {
+    margin: 70px auto;
+    width: 1160px;
+}
 
 
 
@@ -33,20 +35,16 @@ ul, li{
 .container {
     display: block;
     
-    width: 1160px;
-    height: 80px;
-    
-    background: url(img/header_white.png) no-repeat;
+    background: #fff;
     color: #444;
-    
-    margin: 0 auto; /*--отцентровка--*/
-    margin-top: 70px;
-    
-    box-shadow: 1px 15px 35px -30px #000;
+    box-shadow: inset 0px -40px 36px rgba(0, 0, 0, 0.044);
+    /*наконец-таки, переход от серого к белому с размытием*/
 }
 .nav {
     display: flex; /*выравнивание всех эл оболочки в одну строку*/
     align-items: center;
+    box-shadow: 1px 15px 35px -30px #000;
+
 }
 .menu {
     display: flex;
@@ -124,29 +122,27 @@ li.vertical-align {
     line-height: 40px;
 }
 
-
-
-
-
-
-
-
 /*----------------------------*/
 /* SEARCH BOX */
 /*----------------------------*/
+.wrapper__cart{
+    height: 0;
+    width: 0;
+    padding: 25px 100px 0;
+}
 .input-wrapper {
     width: 400px;
     height: 80px;
     
     background: url(img/MagnifyingGlass.png) no-repeat 171px 31px;
   }
-.wrapper_search {
+.wrapper__search {
     width: 194px;
    
     margin-left: 200px;
-    margin-top: 20px;
+
 }
-  .wrapper_search:after {
+  .wrapper__search:after {
     position: absolute;
     
     overflow: hidden;
@@ -180,35 +176,32 @@ li.vertical-align {
 
 
 
-
-
 .main {
-    display: block;
-    
-    height:940px;
-    width: 1160px;
- }
- .middle_box {
     display: block;
     position: relative;
     
-    height:500px;
-    width: 1160px;
-
-    margin: 0 auto;
-    margin-top: 40px;
     
+    height:500px;
+
+    margin-top: 40px;
+
+    color: #444;
+    background: #fff;
+    box-shadow: inset 0px -300px 90px rgba(0, 0, 0, 0.033);  
+ }
+ .middle_box {
+    height:500px;
+
     box-shadow: 1px 15px 35px -30px #000;
 
     background:
     url(img/filter.png) no-repeat 100% 50% ,
     url(img/pic.png) no-repeat 100% 50%,
-    url(img/overlay.png) no-repeat 100% 50%,
-    url(img/whiteworld.png) no-repeat 100% 50% ;
+    url(img/overlay.png) no-repeat 100% 50%;
     }
 /*---Левая часть:логотип и осн.инф.---*/
 .middle_box_content {
-    padding: 195px 627px 137px 40px;
+    padding: 198px 627px 1px 40px;
 }
 .middle_box_content h1 {
     font-size: 21px;
@@ -231,44 +224,35 @@ li.vertical-align {
 
 /*---------------------------------*/
 /*----------BUTTON-------------*/
-a.green-button {
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    
-    color: #fff;
-    
+.button-1 {
     display:block;
+
+    margin: 45px 0 40px;
+}
+.button-1__style {
     width:150px;
     height: 40px;
-    text-align: center;
+
+    border: 1px solid rgb( 33, 126, 74 );
+    border-radius: 4px;
     line-height: 20px;
 
+    background-color: rgb( 43, 153, 91 );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+    
+    text-align: center;
+    padding: 8px;
+}
+.button-1__style:hover {
+    background-color: rgb( 75, 183, 141 );
+}
+a.button-1__text {
     font-size: 14px;
     font-weight: bold;
-
-    padding: 8px 16px;
-    margin: 40px 0;
-
-    text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: background-color 0.1s linear;
-    -moz-transition: background-color 0.1s linear;
-    -o-transition: background-color 0.1s linear;
-    transition: background-color 0.1s linear;        
+    color: #fff;
     }
-    a.green-button {
-    background-color: rgb( 43, 153, 91 );
-    border: 1px solid rgb( 33, 126, 74 );
-    }
-            
-    a.green-button:hover {
-    background-color: rgb( 75, 183, 141 );
-    }
-    /*---------------------------------*/
-
-
+/*---------------------------------*/
+/*---------------------------------*/
 
 .middle_box_logo-2 {
     position: absolute;
@@ -276,13 +260,13 @@ a.green-button {
     top: 40px;
     right: 40px;
 }
-.middle_box_logo-3 {
+
+.middle_box_content p3 {
     position: absolute;
 
     bottom: 30px;
     right: 40px;
-}
-.middle_box_logo-3 p3 {
+
     color:#fff ;
 
     font-size: 72px;
@@ -293,112 +277,128 @@ a.green-button {
 
 
 /*---------------------------------*/
-/*  listings section  */
-.wrapper{
-    display: block;
-    position: relative;
 
-}
-.listings{  
-    width: 1160px;
 
+
+
+/* Product  */
+.container-pr {
     margin: 0 auto;
-    padding: 40px 0;
+    width: 1160px;
 }
-.properties_list li {
-    background: 
   
-    url('img/product_bg.png') no-repeat 100%;
-
+.product-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.listings ul.properties_list{
-    list-style: none;
-    overflow: hidden;
-}
-
-.listings ul.properties_list li{
-    color: #444;
-
-    display: block;
+  
+.product-item {
+    margin: 40px 40px 0 0;
     width: 360px;
     height: 400px;
-    position: relative;
-    float: left;
-    margin: 0 40px 40px 0;
 }
-
-.listings ul.properties_list li img.property_img{
-    width: 100%;
-    height: auto!important;
-    vertical-align: top;
-}
-
-.properties_list li .vans-logo {
-    position: absolute;
-    top: 177px;
-    right: 3px;
-}
-.listings ul.properties_list li:nth-child(3n+0){
+.product-item:last-of-type {
     margin-right: 0;
 }
-
-.listings ul li .property_details{
+.product-pics {
+height: 240px;
+background: 
+url(img/vans.png) no-repeat 100% 110%,
+url(img/product_image.png) no-repeat 100%;
 }
-.listings ul li .property_details h1 a{
+.product-items li {
+    background: #fff;
+    box-shadow: inset 0px -300px 90px rgba(0, 0, 0, 0.033);
+}
+.product-item__details{
+    display: inline-block;   
+
+    width: 360px;
+    height: 160px;
+
+    padding: 0 30px;
+}
+
+
+h4 h5 h6 {
     text-decoration: none;
-    color: #444;
 }
-.listings ul li .property_details h1{
-    font-size: 16px;
+h4 {
+    margin: 20px 0 5px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
-    line-height: 7px;
 }
+.property_size {
+    font-size: 12px;
+}
+.product-item__choose {
+    float: left;
+    display: flex;
+    width: 100%;
+    height: 20%;
+}
+h5 {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+select{
+    background: #f7f7f7;
+    color: #67a3bb;
+    border: 0;
+    padding: 5px;
+    border-radius: 0;
+    resize: none;
+}
+select{
+    outline: 0 !important;
+}
+h6 {
+    margin: 10px auto;
+    font-size: 28px;
+}
+.wrapper-line {
+    display: flex;
 
-
-
-
-
+    width: 100%;
+    height: 35%;
+}
 /*---------------------------------*/
 /*----------BUTTON-------------*/
-a.blue-button {
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
-    
-    color: #fff;
-    
+.product-item__button {
     display:block;
-    width:150px;
-    height: 40px;
+
+    padding: 0px 60px;
+    margin: 0 0 20px 0;
+
     text-align: center;
-    line-height: 20px;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    padding: 8px 16px;
-    margin: 40px 0;
-
+    line-height: 35px;
     text-decoration: none;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: background-color 0.1s linear;
-    -moz-transition: background-color 0.1s linear;
-    -o-transition: background-color 0.1s linear;
-    transition: background-color 0.1s linear;        
-    }
-    a.blue-button {
-    background-color: #67a3bb;
-    border: 1px solid #67a3bb;
-    }
-            
-    a.blue-button:hover {
+}
+.product-item__button-style{
+    width:150px;
+    height: 40px;    
+
+   background-color: #67a3bb;
+    border: 1px solid #67a3bb; 
+
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08);
+   transition: background-color 0.1s linear;        
+}
+    .product-item__button-text  {   
+    color: #fff;
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: bold;
+   }          
+    .product-item__button-style:hover {
     background-color: #7fbbd3;
     }
+
     /*---------------------------------*/
-
-
 
 
 
@@ -411,9 +411,7 @@ a.blue-button {
     width: 1160px;
     height: 50px;
 
-    margin: 0 auto;
     margin-top: 40px;
-    bottom: 70px;
 
     box-shadow: 1px 15px 35px -20px #000;
 
