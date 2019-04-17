@@ -8,8 +8,7 @@
 <!-- осн.элементы: header(menu), main(inf-block-1, product-block-2), footer(block-links) -->
 <body>
 <!---------- HEADER MENU---------->
-    <header>
-  
+<div class="wrapper">
       <div class="container">       
         <nav class="nav">
             <ul class="menu"> <!-- ul задаем список, li прописываем пункты -->  
@@ -20,24 +19,27 @@
               <li><a href="#">MENS</a></li>
               <li><a href="#">WOMENS</a></li>
               <li><a href="#">CONTACT</a></li>
-              
-              <div class="input-wrapper">
-                   <div class="wrapper_search">
-                        <input type="text" name="search" placeholder="Search..."/> 
-                   </div>
-              </div>
-
             </ul>
+
+            <div class="input-wrapper">
+                <div class="wrapper__cart">
+                      <a href="nextlinks/cart.html"><img src="css/img/shopping_cart.png" width="30" height="30"/></a>
+                </div>
+
+                <div class="wrapper__search">
+                     <input type="text" name="search" placeholder="Search..."/> 
+                </div>
+           </div>
+
         </nav> 
       </div>
-    </header>
-
+<!----------The END: HEADER MENU---------->
 
 
 
 
 <!----------MAIN---------->
-<main>
+<div class="main"> 
   <div class="middle_box"> 
 <!--Левая сторона-->
         <div class="middle_box_content">   
@@ -50,87 +52,118 @@
                 After its initial design in 1952, the Ray-Ban Wayfarer quickly endeared itself to Hollywood filmmakers, celebrities, musicians and artists, 
                 solidifying its iconic status for years to come.
               </p>
-                  <div><a href="#" class="green-button">Find Out More</a></div>
-                  <div class="middle_box_logo-1"><img src="css/img/logo1.png" alt="logo without background"/></div>
-        </div>
-<!--Правая сторона-->
-        <div class="middle_box_pic-content">
-            <div class="middle_box_logo-2"><img src="css/img/logo2.png" alt="logo red background" width="95" height="52"/></div>
-            <div class="middle_box_logo-3">
+
               <p3>
                 NEVER HIDE
               </p3>
-            </div>
+                  <div class="button-1">
+                      <div class="button-1__style">
+                    <a href="#" class="button-1__text">FIND OUT MORE</a></div>
+                      </div>
+                
+                <div class="middle_box_logo-1"><img src="css/img/logo1.png" alt="logo without background"/></div>
+
+<!--Правая сторона-->
+            <div class="middle_box_logo-2"><img src="css/img/logo2.png" alt="logo red background" width="95" height="52"/></div>
+   
         </div>
-      </main> <!-- end of main inf part -->
+      </div>
+  </div>
+  <!----------THE END: MAIN---------->
 
 
   
 <!----------Product---------->    
-<section class="listings">
-	<div class="wrapper">
-		  <ul class="properties_list">
-				  <li>
-					   <a href="#"><img src="css/img/product_image.png" alt="" title="" class="property_img"/></a>
-             <div class="vans-logo"><img src="css/img/vans.png" alt="vans"/></div>
+
+<div class="container-pr">
+  <ul class="product-items">
+      <li class="product-item">
+          <div class="product-pics"></div>
+               <div class="product-item__details">         
+                <h4>Product 1</h4>
             
-             <div class="property_details">
+                <p4 class="property_size">(Parrot/ Light Blue)</p4>
+                
+                <div class="product-item__choose"> 
+                  <h5>Size:</h5>
+                   <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                  </select>
+                </div>
 
-                <h1>Product 1</h1>
+                <div class="wrapper-line">
+                <h6>£14.00</h6>
+
+                  <div class="product-item__button">
+                    <div class="product-item__button-style">
+                       <a href="#" class="product-item__button-text">ADD TO BASKET</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </li>       
+      <li class="product-item">
+          <div class="product-pics"></div>
+               <div class="product-item__details">         
+                <h4>Product 2</h4>
             
-                <p2>(Parrot/ Light Blue)<span class="property_size"></span></h2>
+                <p4 class="property_size">(Parrot/ Light Blue)</p4>
 
-                <h3>Size: S<span class="property_size"><a href="#">[Change]</a></span></h3>
+                <div class="product-item__choose"> 
+                    <h5>Size:</h5>
+                     <select>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                    </select>
+                  </div>
+  
+                <div class="wrapper-line">
 
-                <h4 class="price">£27.00</h4>
+                <h6>£27.00</h6>
 
-              <div><a href="#" class="blue-button">ADD TO BASKET</a></div>
+                  <div class="product-item__button">
+                    <div class="product-item__button-style">
+                       <a href="#" class="product-item__button-text">ADD TO BASKET</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </li>    
+      <li class="product-item">
+          <div class="product-pics"></div>
+               <div class="product-item__details">         
+                <h4>Product 3</h4>
+            
+                <p4 class="property_size">(Parrot/ Light Blue)</p4>
 
-					    </div>
-          </li>
-        
-				  <li>
-              <a href="#"><img src="css/img/product_image.png" alt="" title="" class="property_img"/></a>
-              <div class="vans-logo"><img src="css/img/vans.png" alt="vans"/></div>
-             
-              <div class="property_details">
- 
-                 <h1>Product 1</h1>
-             
-                 <p2>(Parrot/ Light Blue)<span class="property_size"></span></h2>
- 
-                 <h3>Size: S<span class="property_size"><a href="#">[Change]</a></span></h3>
- 
-                 <h4 class="price">£27.00</h4>
- 
-               <div><a href="#" class="blue-button">ADD TO BASKET</a></div>
- 
-               </div>
-           </li>
+                <div class="product-item__choose"> 
+                    <h5>Size:</h5>
+                     <select>
+                      <option>S</option>
+                      <option>M</option>
+                      <option>L</option>
+                    </select>
+                  </div>
+  
+                <div class="wrapper-line">
 
-           <li>
-              <a href="#"><img src="css/img/product_image.png" alt="" title="" class="property_img"/></a>
-              <div class="vans-logo"><img src="css/img/vans.png" alt="vans"/></div>
-             
-              <div class="property_details">
- 
-                 <h1>Product 1</h1>
-             
-                 <p2>(Parrot/ Light Blue)<span class="property_size"></span></h2>
- 
-                 <h3>Size: S<span class="property_size"><a href="#">[Change]</a></span></h3>
- 
-                 <h4 class="price">£27.00</h4>
- 
-               <div><a href="#" class="blue-button">ADD TO BASKET</a></div>
- 
-               </div>
-           </li>
+                <h6>£115.00</h6>
+
+                  <div class="product-item__button">
+                    <div class="product-item__button-style">
+                       <a href="#" class="product-item__button-text">ADD TO BASKET</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </li>
            
-      </ul>      
-  </div>
-</section> 
-
+    </ul>      
+</div> 
+<!----------THE END: Product---------->    
 
 
 <!----------FOOTER---------->
@@ -148,6 +181,8 @@
       </div>
     </ul>
 </div>
+<!----------THE END: FOOTER---------->
 
+</div>
 </body>
 </html>
